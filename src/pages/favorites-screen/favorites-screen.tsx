@@ -1,5 +1,5 @@
 
-function FavoutitesScreen(): JSX.Element {
+function FavoritesScreen(): JSX.Element {
     return (
       <div className="page">
         <header className="header">
@@ -230,5 +230,5 @@ function FavoutitesScreen(): JSX.Element {
     );
   }
   
-  export default FavoutitesScreen;
+  export default FavoritesScreen;
   
