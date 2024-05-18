@@ -2,18 +2,20 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainScreen from '../../pages/main-screen/main-screen';
 import LoginScreen from '../../pages/login-screen/login-screen';
-import FavoritesScreen from '../../pages/favorites-screen/favorites-screen';
+import FavoutitesScreen from '../../pages/favorites-screen/favorites-screen';
 import OfferScreen from '../../pages/offer-screen/offer-screen';
 import ErrorScreen from '../../pages/error-screen/error-screen';
 import PrivateRoute from '../private-route/private-route';
+import { Review } from '../../types/review';
 import { Offer } from '../../types/offer';
 
 type AppComponentProps = {
   placesCount: number;
+  reviews: Review[];
   offers: Offer[];
-}
+};
 
-function App({ placesCount, offers }: AppComponentProps): JSX.Element {
+function App({ placesCount, offers, reviews }: AppComponentProps): JSX.Element {
   const favourites = offers.filter((o) => o.isFavorite);
   return (
     <BrowserRouter>
@@ -24,12 +26,12 @@ function App({ placesCount, offers }: AppComponentProps): JSX.Element {
           path="/favourites"
           element={
             <PrivateRoute>
-              <FavoritesScreen favourites={favourites}/>
+              <FavoutitesScreen favourites={favourites}/>
             </PrivateRoute>
           }
         />
         <Route path="/login" element={<LoginScreen />} />
-        <Route path="/offer/:id" element={<OfferScreen />} />
+        <Route path="/offer/:id" element={<OfferScreen reviews={reviews} offers={offers}/>} />
       </Routes>
     </BrowserRouter>
   );
