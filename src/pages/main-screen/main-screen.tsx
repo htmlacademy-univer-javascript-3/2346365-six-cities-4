@@ -1,13 +1,13 @@
 
 import { Link } from 'react-router-dom';
 import CitiesMap from '../../components/cities-map/cities-map';
-import CityCardList from '../../components/city-card-list/city-card-list';
+import CityCardList from '../../components/cities-card-list/cities-card-list';
 import { Offer } from '../../types/offer';
 
 type MainScreenProps = {
   placesCount: number;
   offers: Offer[];
-}
+};
 
 function MainScreen({ placesCount, offers }: MainScreenProps): JSX.Element {
   return (
@@ -17,7 +17,7 @@ function MainScreen({ placesCount, offers }: MainScreenProps): JSX.Element {
           <div className="header__wrapper">
             <div className="header__left">
               <Link
-                to='/'
+                to="/"
                 className="header__logo-link header__logo-link--active"
               >
                 <img
@@ -125,7 +125,7 @@ function MainScreen({ placesCount, offers }: MainScreenProps): JSX.Element {
                   </li>
                 </ul>
               </form>
-              <CityCardList cities={offers} />
+              <CityCardList cities={offers} viewType='regular' />
             </section>
             <div className="cities__right-section">
               <section className='cities__map map'>
