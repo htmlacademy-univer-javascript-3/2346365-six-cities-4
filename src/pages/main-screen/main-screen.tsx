@@ -16,7 +16,7 @@ function MainScreen(): JSX.Element {
   const [currentCityOffers, setCurrentCityOffers] = useState<Offer[]>(offers);
 
   useEffect(() => {
-    const filteredOffers = offers.filter((offer) => offer.city.name === city);
+    const filteredOffers = offers.filter((offer) => offer.city === city);
     setCurrentCityOffers(filteredOffers);
   }, [city, offers]);
 
@@ -77,7 +77,7 @@ function MainScreen(): JSX.Element {
           <div className="cities__places-container container">
             <section className="cities__places places">
               <h2 className="visually-hidden">Places</h2>
-              <b className="places__found">{`${currentCityOffers.length} places to stay in ${city}`}</b>
+              <b className="places__found">{`${currentCityOffers.length} places to stay in ${city.name}`}</b>
               <SortingBlock />
               <CitiesCardList offers={currentCityOffers} />
             </section>

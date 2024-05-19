@@ -4,7 +4,7 @@ import { CityCardListProps } from '../../types/card-list';
 import { CardType } from '../../const';
 // import { useState } from 'react';
 
-function NearestCitiesCardList({ offers }: CityCardListProps) {
+function NearestOffersCardList({ offers }: CityCardListProps) {
   // const [activeCard, setActiveCard] = useState({id: 1});
   return (
     <div className="near-places__list places__list">
@@ -19,4 +19,4 @@ function NearestCitiesCardList({ offers }: CityCardListProps) {
   );
 }
 
-export default NearestCitiesCardList;
+export default NearestOffersCardList;
