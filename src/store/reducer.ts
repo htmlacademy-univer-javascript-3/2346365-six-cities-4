@@ -7,8 +7,10 @@ import {
   setSelectedPoint,
   setError,
   setOffersDataLoadingStatus,
+  setAuthorizationStatus,
 } from './action';
 import { City, Offer } from '../types/offer';
+import { AuthorizationStatus } from '../const';
 
 type StateType = {
   city: City;
@@ -17,6 +19,7 @@ type StateType = {
   selectedPoint: {
     title: string;
   } | null;
+  authorizationStatus: AuthorizationStatus;
   isOffersDataLoading: boolean;
   error: string | null;
 };
@@ -33,6 +36,7 @@ const initialState: StateType = {
   offersList: [],
   selectedSortType: 'Popular',
   selectedPoint: null,
+  authorizationStatus: AuthorizationStatus.Unknown,
   isOffersDataLoading: false,
   error: null,
 };
@@ -50,6 +54,9 @@ const reducer = createReducer(initialState, (builder) => {
     })
     .addCase(setSelectedPoint, (state, { payload }) => {
       state.selectedPoint = payload;
+    })
+    .addCase(setAuthorizationStatus, (state, action) => {
+      state.authorizationStatus = action.payload;
     })
     .addCase(setOffersDataLoadingStatus, (state, action) => {
       state.isOffersDataLoading = action.payload;
