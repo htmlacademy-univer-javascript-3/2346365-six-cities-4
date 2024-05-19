@@ -27,14 +27,14 @@ export {
 } from './slices/nearby-offers';
 
 export {
-  changeFavouriteStatusAction,
-  fetchFavouritesAction,
-  updateMultipleFavourites,
+  changeFavoriteStatusAction,
+  fetchFavoritesAction,
+  updateMultipleFavorites,
   getFavorites,
   getIsFavoriteStatusSubmitting,
-  getFavouritesCount,
+  getFavoritesCount,
   getIsFavoritesLoading,
-} from './slices/favourites';
+} from './slices/favorites';
 
 export {
   changeSortingType,

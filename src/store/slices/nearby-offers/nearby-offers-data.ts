@@ -2,7 +2,7 @@ import { Offer } from '../../../types/offer';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { NameSpace } from '../../../const';
 import { fetchNearbyAction } from './api-actions';
-import { updateFavourites } from './utils';
+import { updateFavorites } from './utils';
 
 type NearbyOffersData = {
   nearby: Offer[];
@@ -21,7 +21,7 @@ export const nearbyOffersData = createSlice({
   initialState: initialNearbyData,
   reducers: {
     updateMultipleNearby: (state, action: PayloadAction<Offer>) => {
-      updateFavourites(state.nearby, action.payload);
+      updateFavorites(state.nearby, action.payload);
     },
   },
   extraReducers(builder) {

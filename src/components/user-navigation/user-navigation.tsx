@@ -5,7 +5,7 @@ import {
   getAuthCheckedStatus,
   getUserInfo,
   logoutAction,
-  getFavouritesCount,
+  getFavoritesCount,
 } from '../../store';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 
@@ -13,7 +13,7 @@ function UserNavigation(): JSX.Element {
   const dispatch = useAppDispatch();
 
   const userInfo = useAppSelector(getUserInfo);
-  const favouritesCount = useAppSelector(getFavouritesCount);
+  const favoritesCount = useAppSelector(getFavoritesCount);
   const isLoggedIn = useAppSelector(getAuthCheckedStatus);
 
   const userAvatar = userInfo?.avatarUrl
@@ -44,7 +44,7 @@ function UserNavigation(): JSX.Element {
               <span className="header__user-name user__name">
                 {userInfo?.email}
               </span>
-              <span className="header__favorite-count">{favouritesCount}</span>
+              <span className="header__favorite-count">{favoritesCount}</span>
             </Link>
           </li>
           <li className="header__nav-item">

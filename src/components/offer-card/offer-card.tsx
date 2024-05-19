@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { capitalizeFirstLetter, formatRating } from '../../utils';
 import { CardType } from '../offers-list/offers-list';
 import { Offer } from '../../types/offer';
-import AddToFavouritesButton from '../add-to-favourites-button/add-to-favourites-button';
+import AddToFavoritesButton from '../add-to-favorites-button/add-to-favorites-button';
 
 type PlaceCardProps = Offer & {
   cardType: CardType;
@@ -52,7 +52,7 @@ function CommonPlaceCard(props: PlaceCardProps): JSX.Element {
             <b className="place-card__price-value">€{rest.price}</b>
             <span className="place-card__price-text">/&nbsp;night</span>
           </div>
-          <AddToFavouritesButton
+          <AddToFavoritesButton
             id={id}
             isFavorite={isFavorite}
             iconWidth={18}

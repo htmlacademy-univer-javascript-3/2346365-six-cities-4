@@ -4,13 +4,13 @@ import { Offer } from '../../../types/offer';
 import { State } from '../../../types/state';
 
 export const getFavorites = (state: State): Offer[] =>
-  state[NameSpace.FavouritesData].favourites;
+  state[NameSpace.FavoritesData].favorites;
 
-export const getFavouritesCount = (state: State): number =>
-  state[NameSpace.FavouritesData].favourites.length;
+export const getFavoritesCount = (state: State): number =>
+  state[NameSpace.FavoritesData].favorites.length;
 
 export const getIsFavoritesLoading = (state: State): boolean =>
-  state[NameSpace.FavouritesData].isFavouritesLoading;
+  state[NameSpace.FavoritesData].isFavoritesLoading;
 
 export const getIsFavoriteStatusSubmitting = (state: State): boolean =>
-  state[NameSpace.FavouritesData].isFavouriteStatusSubmitting;
+  state[NameSpace.FavoritesData].isFavoriteStatusSubmitting;

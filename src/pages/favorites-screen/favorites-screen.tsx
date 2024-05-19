@@ -3,15 +3,15 @@ import cn from 'classnames';
 import { getFavorites, getIsFavoritesLoading } from '../../store';
 import { useAppSelector } from '../../hooks';
 import Loader from '../../components/loader/loader';
-import EmptyFavorites from '../../components/empty-favourites/empty-favourites';
-import Favourites from '../../components/favourites/favourites';
+import EmptyFavorites from '../../components/empty-favorites/empty-favorites';
+import Favorites from '../../components/favorites/favorites';
 
-function FavoutitesScreen(): JSX.Element {
-  const isFavouritesLoading = useAppSelector(getIsFavoritesLoading);
+function FavoritesScreen(): JSX.Element {
+  const isFavoritesLoading = useAppSelector(getIsFavoritesLoading);
   const favorites = useAppSelector(getFavorites);
   const isEmptyFavorites = favorites.length === 0;
 
-  if (isFavouritesLoading) {
+  if (isFavoritesLoading) {
     return <Loader />;
   }
 
@@ -25,11 +25,11 @@ function FavoutitesScreen(): JSX.Element {
         {isEmptyFavorites ? (
           <EmptyFavorites />
         ) : (
-          <Favourites favorites={favorites} />
+          <Favorites favorites={favorites} />
         )}
       </div>
     </main>
   );
 }
 
-export default FavoutitesScreen;
+export default FavoritesScreen;

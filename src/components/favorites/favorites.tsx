@@ -1,18 +1,18 @@
 
 import { Offer } from '../../types/offer.ts';
-import FavouritesList from '../favourites-list/favourites-list';
+import FavoritesList from '../favorites-list/favorites-list';
 
-type FavouritesProps = {
+type FavoritesProps = {
   favorites: Offer[];
 };
 
-function Favourites({ favorites }: FavouritesProps): JSX.Element {
+function Favorites({ favorites }: FavoritesProps): JSX.Element {
   return (
     <section className="favorites">
       <h1 className="favorites__title">Saved listing</h1>
-      <FavouritesList favoriteList={favorites} />
+      <FavoritesList favoriteList={favorites} />
     </section>
   );
 }
 
-export default Favourites;
+export default Favorites;
