@@ -24,7 +24,7 @@ export enum NameSpace {
   User = 'USER',
   MultipleOffersData = 'MULTIPLE_OFFERS_DATA',
   SingleOfferData = 'SINGLE_OFFER_DATA',
-  FavouritesData = 'FAVOURITES_DATA',
+  FavoritesData = 'FAVORITES_DATA',
   NearbyOffersData = 'NEARBY_OFFERS_DATA',
   ReviewsData = 'REVIEWS_DATA',
 }
@@ -48,13 +48,13 @@ export enum DescriptionPage {
   Login = 'Description login',
 }
 
-export enum FavouriteStatus {
+export enum FavoriteStatus {
   Add = 1,
   Remove = 0,
 }
 
 export enum CardType {
-  favourites = 'favorites__card',
+  favorites = 'favorites__card',
   nearest = 'near-places__card',
   regular = 'cities__card',
 }

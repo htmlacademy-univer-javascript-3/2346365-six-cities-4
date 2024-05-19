@@ -1,7 +1,7 @@
 
 import { Offer } from '../../../types/offer';
 
-export const updateFavourites = (favorites: Offer[], updatedOffer: Offer) => {
+export const updateFavorites = (favorites: Offer[], updatedOffer: Offer) => {
   const favoriteOfferIndex = favorites.findIndex(
     (el) => el.id === updatedOffer.id
   );

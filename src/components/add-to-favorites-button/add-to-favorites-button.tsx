@@ -1,15 +1,15 @@
 import { useNavigate } from 'react-router-dom';
 
-import { Routes, FavouriteStatus } from '../../const';
+import { Routes, FavoriteStatus } from '../../const';
 
 import {
   getIsFavoriteStatusSubmitting,
-  changeFavouriteStatusAction,
+  changeFavoriteStatusAction,
   getAuthCheckedStatus,
 } from '../../store';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 
-type AddToFavouritesButtonProps = {
+type AddToFavoritesButtonProps = {
   isFavorite: boolean;
   id: string;
   iconWidth: number;
@@ -20,7 +20,7 @@ type AddToFavouritesButtonProps = {
   iconClass: string;
 };
 
-function AddToFavouritesButton(props: AddToFavouritesButtonProps): JSX.Element {
+function AddToFavoritesButton(props: AddToFavoritesButtonProps): JSX.Element {
   const {
     isFavorite,
     id,
@@ -45,9 +45,9 @@ function AddToFavouritesButton(props: AddToFavouritesButtonProps): JSX.Element {
     }
 
     dispatch(
-      changeFavouriteStatusAction({
+      changeFavoriteStatusAction({
         offerId: id,
-        status: isFavorite ? FavouriteStatus.Remove : FavouriteStatus.Add,
+        status: isFavorite ? FavoriteStatus.Remove : FavoriteStatus.Add,
       })
     );
   };
@@ -73,4 +73,4 @@ function AddToFavouritesButton(props: AddToFavouritesButtonProps): JSX.Element {
   );
 }
 
-export default AddToFavouritesButton;
+export default AddToFavoritesButton;

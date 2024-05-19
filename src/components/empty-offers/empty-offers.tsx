@@ -1,6 +1,7 @@
 
 import { getSelectedCity } from '../../store';
 import { useAppSelector } from '../../hooks';
+import { memo } from 'react';
 
 function EmptyOffers(): JSX.Element {
   const cityName = useAppSelector(getSelectedCity);
@@ -17,4 +18,6 @@ function EmptyOffers(): JSX.Element {
   );
 }
 
-export default EmptyOffers;
+const EmptyOffersMemo = memo(EmptyOffers);
+
+export default EmptyOffersMemo;

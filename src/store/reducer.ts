@@ -7,7 +7,7 @@ import { multipleOffersData } from './slices/multiple-offers';
 import { singleOfferData } from './slices/offer';
 import { nearbyOffersData } from './slices/nearby-offers';
 import { reviewsData } from './slices/reviews';
-import { favouritesData } from './slices/favourites';
+import { favoritesData } from './slices/favorites';
 import { globalState } from './slices/global';
 
 export const reducer = combineReducers({
@@ -15,7 +15,7 @@ export const reducer = combineReducers({
   [NameSpace.User]: userData.reducer,
   [NameSpace.MultipleOffersData]: multipleOffersData.reducer,
   [NameSpace.SingleOfferData]: singleOfferData.reducer,
-  [NameSpace.FavouritesData]: favouritesData.reducer,
+  [NameSpace.FavoritesData]: favoritesData.reducer,
   [NameSpace.NearbyOffersData]: nearbyOffersData.reducer,
   [NameSpace.ReviewsData]: reviewsData.reducer,
 });

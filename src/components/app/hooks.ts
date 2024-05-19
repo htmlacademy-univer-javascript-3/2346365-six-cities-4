@@ -1,7 +1,7 @@
 
 import { useEffect } from 'react';
 
-import { fetchFavouritesAction, getAuthCheckedStatus } from '../../store';
+import { fetchFavoritesAction, getAuthCheckedStatus } from '../../store';
 
 import { useAppDispatch, useAppSelector } from '../../hooks';
 
@@ -11,7 +11,7 @@ const useFetchFavorites = () => {
 
   useEffect(() => {
     if (authCheckedStatus) {
-      dispatch(fetchFavouritesAction());
+      dispatch(fetchFavoritesAction());
     }
   }, [dispatch, authCheckedStatus]);
 };

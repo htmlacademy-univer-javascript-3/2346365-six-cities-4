@@ -1,7 +1,7 @@
 
 import { formatRating, capitalizeFirstLetter } from '../../utils';
 import { ExtendedOffer } from '../../types/offer';
-import AddToFavouritesButton from '../add-to-favourites-button/add-to-favourites-button';
+import AddToFavoritesButton from '../add-to-favorites-button/add-to-favorites-button';
 
 type OfferDescriptionProps = {
   offer: ExtendedOffer;
@@ -47,7 +47,7 @@ function OfferDescription({ offer }: OfferDescriptionProps): JSX.Element {
       )}
       <div className="offer__name-wrapper">
         <h1 className="offer__name">{title}</h1>
-        <AddToFavouritesButton
+        <AddToFavoritesButton
           id={id}
           isFavorite={isFavorite}
           iconWidth={31}
