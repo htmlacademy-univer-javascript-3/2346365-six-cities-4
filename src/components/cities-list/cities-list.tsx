@@ -1,37 +1,53 @@
+
+import cn from 'classnames';
+import { CityName } from '../../const';
+import { changeCity } from '../../store';
 import { useAppDispatch } from '../../hooks';
-import { changeCity } from '../../store/action';
 
 type CitiesListProps = {
-  cities: { name: string; id: number }[];
+  selectedCity: CityName;
 };
 
-type CityProps = {
-  name: string;
-  changeCityName: (city: string) => void;
-};
-const City = ({ name, changeCityName }: CityProps): JSX.Element => (
-  <li className="locations__item" onClick={() => changeCityName(name)}>
-    <a className="locations__item-link tabs__item" href="#">
-      <span>{name}</span>
-    </a>
-  </li>
-);
-
-function CitiesList({ cities }: CitiesListProps): JSX.Element {
+function CitiesList({ selectedCity }: CitiesListProps): JSX.Element {
   const dispatch = useAppDispatch();
-  const handleCityChange = (city: string) => {
+
+  const cities: CityName[] = [
+    CityName.Paris,
+    CityName.Cologne,
+    CityName.Brussels,
+    CityName.Amsterdam,
+    CityName.Hamburg,
+    CityName.Dusseldorf,
+  ];
+
+  const handleCityChange = (
+    evt: React.MouseEvent<HTMLAnchorElement>,
+    city: CityName
+  ) => {
+    evt.preventDefault();
     dispatch(changeCity(city));
   };
+
   return (
-    <ul className="locations__list tabs__list">
-      {cities.map((city) => (
-        <City
-          key={city.id}
-          name={city.name}
-          changeCityName={handleCityChange}
-        />
-      ))}
-    </ul>
+    <div className="tabs">
+      <section className="locations container">
+        <ul className="locations__list tabs__list">
+          {cities.map((city) => (
+            <li key={city} className="locations__item">
+              <a
+                className={cn('locations__item-link', 'tabs__item', {
+                  'tabs__item--active': selectedCity === city,
+                })}
+                href="#"
+                onClick={(evt) => handleCityChange(evt, city)}
+              >
+                <span>{city}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
   );
 }
 
