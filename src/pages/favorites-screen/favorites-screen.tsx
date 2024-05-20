@@ -3,7 +3,7 @@ import cn from 'classnames';
 import { getFavorites, getIsFavoritesLoading } from '../../store';
 import { useAppSelector } from '../../hooks';
 import Loader from '../../components/loader/loader';
-import EmptyFavorites from '../../components/empty-favorites/empty-favorites';
+import EmptyFavorites from '../../components/favorites/empty-favorites';
 import Favorites from '../../components/favorites/favorites';
 
 function FavoritesScreen(): JSX.Element {

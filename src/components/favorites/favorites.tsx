@@ -1,6 +1,6 @@
 
 import { Offer } from '../../types/offer.ts';
-import FavoritesList from '../favorites-list/favorites-list';
+import FavoritesList from './favorites-list.tsx';
 
 type FavoritesProps = {
   favorites: Offer[];
