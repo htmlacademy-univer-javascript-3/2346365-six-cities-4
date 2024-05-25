@@ -17,7 +17,7 @@ function LoginScreen(): JSX.Element {
     if (loginRef.current !== null && passwordRef.current !== null) {
       dispatch(
         loginAction({
-          email: loginRef.current.value,
+          login: loginRef.current.value,
           password: passwordRef.current.value,
         })
       );
