@@ -1,8 +1,8 @@
-import SortingBlock from '../sorting-block/sorting-block.tsx';
-import OffersList from '../offer/offers-list/offers-list.tsx';
-import { Offer } from '../../types/offer';
-import { getSelectedCity } from '../../store';
-import { useAppSelector } from '../../hooks/index.ts';
+import SortingBlock from '../../sorting-block/sorting-block.tsx';
+import OffersList from '../offers-list/offers-list.tsx';
+import { Offer } from '../../../types/offer';
+import { getSelectedCity } from '../../../store';
+import { useAppSelector } from '../../../hooks/index.ts';
 import { memo } from 'react';
 
 type AvailableOffersProps = {

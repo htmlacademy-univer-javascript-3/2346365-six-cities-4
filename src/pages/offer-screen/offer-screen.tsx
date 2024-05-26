@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import LoadingScreen from '../loading-screen/loading-screen';
-import NearbyOffers from '../../components/nearby-offers/nearby-offers';
+import NearbyOffers from '../../components/offer/nearby-offers/nearby-offers';
 import {
   getIsNearbyOffersLoading,
   getIsOfferLoading,

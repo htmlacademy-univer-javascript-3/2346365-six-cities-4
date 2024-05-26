@@ -1,7 +1,6 @@
-
 import { test, expect } from '@playwright/test';
 
-test.describe('Favourites', () => {
+test.describe('Favorites', () => {
   test('Проверка работы Избранного (неавторизованный пользователь)', async ({
     page,
   }) => {
@@ -27,6 +26,19 @@ test.describe('Favourites', () => {
   test('Проверка работы Избранного (авторизованный пользователь)', async ({
     page,
   }) => {
+    const isFavSelected = async () => {
+      const favBtnClassList = await page
+        .locator('.bookmark-button')
+        .first()
+        .evaluate((el) => [...el.classList]);
+      return favBtnClassList.includes('place-card__bookmark-button--active');
+    };
+
+    const getFavCount = async () =>
+      parseInt(
+        (await page.locator('.header__favorite-count').textContent()) || '0'
+      );
+
     await page.goto('http://localhost:5173/login');
 
     // Fill in the login form
@@ -41,34 +53,28 @@ test.describe('Favourites', () => {
 
     await page.waitForSelector('.cities__card');
 
-    const initialFavCounter = parseInt(
-      (await page.locator('.header__favorite-count').textContent()) || '0'
-    );
+    const initialFavCounter = await getFavCount();
 
-    const initialFavBtnClassList = await page
-      .locator('.bookmark-button')
-      .first()
-      .evaluate((el) => [...el.classList]);
-    const wasActive = initialFavBtnClassList.includes(
-      'place-card__bookmark-button--active'
-    );
-    console.log(initialFavBtnClassList, wasActive);
-    page.locator('.bookmark-button').first().click();
+    const wasActive = await isFavSelected();
 
-    const favBtnClassList = await page
-      .locator('.bookmark-button')
-      .first()
-      .evaluate((el) => [...el.classList]);
-    const isSelected = favBtnClassList.includes(
-      'place-card__bookmark-button--active'
-    );
+    await Promise.all([
+      page.waitForResponse(
+        (resp) =>
+          resp.url().includes('/favorite') &&
+          resp.status() === (wasActive ? 200 : 201)
+      ),
+      page.locator('.bookmark-button').first().click(),
+    ]);
+
+    const isActive = await isFavSelected();
+    const changedFavCounter = await getFavCount();
 
     if (wasActive) {
-      expect(isSelected).toBeFalsy();
-      expect(initialFavCounter).toEqual(initialFavCounter - 1);
+      expect(isActive).toBeFalsy();
+      expect(changedFavCounter).toEqual(initialFavCounter - 1);
     } else {
-      expect(isSelected).toBeTruthy();
-      expect(initialFavCounter).toEqual(initialFavCounter + 1);
+      expect(isActive).toBeTruthy();
+      expect(changedFavCounter).toEqual(initialFavCounter + 1);
     }
   });
 });
