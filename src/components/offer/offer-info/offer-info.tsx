@@ -1,4 +1,3 @@
-
 import { getAuthCheckedStatus, getReviews } from '../../../store';
 import { useAppSelector } from '../../../hooks';
 import { Offer, ExtendedOffer } from '../../../types/offer';

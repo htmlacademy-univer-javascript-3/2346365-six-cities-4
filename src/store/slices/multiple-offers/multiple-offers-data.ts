@@ -1,4 +1,3 @@
-
 import { Offer } from '../../../types/offer';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { NameSpace } from '../../../const';

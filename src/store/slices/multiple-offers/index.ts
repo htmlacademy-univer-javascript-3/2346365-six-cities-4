@@ -1,4 +1,3 @@
-
 export { getOffers, getIsOffersLoading } from './selectors';
 
 export { fetchOffersAction } from './api-actions';

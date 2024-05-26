@@ -1,5 +1,4 @@
-
-import CitiesMap from '../city/cities-map/cities-map';
+import CitiesMap from '../cities/cities-map/cities-map';
 import cn from 'classnames';
 import { Offer } from '../../types/offer';
 import { useCallback, useState } from 'react';

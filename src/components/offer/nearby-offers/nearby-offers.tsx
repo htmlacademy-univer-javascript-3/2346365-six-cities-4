@@ -1,4 +1,3 @@
-
 import OffersList from '../offers-list/offers-list';
 import { Offer } from '../../../types/offer';
 

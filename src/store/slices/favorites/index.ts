@@ -1,4 +1,3 @@
-
 export { favoritesData, updateMultipleFavorites } from './favorites-data';
 
 export {

@@ -1,4 +1,3 @@
-
 import { Offer } from '../../../types/offer.ts';
 import EmptyOffers from '../empty-offers/empty-offers.tsx';
 import AvailableOffers from '../available-offers/available-offers.tsx';

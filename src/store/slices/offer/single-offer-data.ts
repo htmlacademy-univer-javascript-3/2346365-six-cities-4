@@ -1,4 +1,3 @@
-
 import { Offer, ExtendedOffer } from '../../../types/offer';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { fetchOfferAction } from './api-actions';

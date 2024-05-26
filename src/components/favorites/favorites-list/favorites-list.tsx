@@ -1,7 +1,6 @@
-
-import FavoritesListItem from './favorites-list-item';
-import { Offer } from '../../types/offer';
-import { CityName } from '../../const';
+import FavoritesListItem from '../favorites-list-item/favorites-list-item';
+import { Offer } from '../../../types/offer';
+import { CityName } from '../../../const';
 
 const getFavoritesByCity = (favoriteList: Offer[]) =>
   favoriteList.reduce(

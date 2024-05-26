@@ -1,4 +1,3 @@
-
 import { test, expect, Locator } from '@playwright/test';
 
 test('Проверка работы фильтрации по городам', async ({ page }) => {

@@ -1,4 +1,3 @@
-
 import { CityName } from '../const';
 
 export type Location = {

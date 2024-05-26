@@ -1,6 +1,5 @@
-
 import { Offer, Location, ExtendedOffer } from '../../../types/offer.ts';
-import CitiesMap from '../../city/cities-map/cities-map.tsx';
+import CitiesMap from '../../cities/cities-map/cities-map.tsx';
 
 type OfferCardMapProps = {
   offers: Offer[];

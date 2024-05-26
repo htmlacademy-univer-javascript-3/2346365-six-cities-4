@@ -1,4 +1,3 @@
-
 import { Offer } from '../../../types/offer';
 
 export const updateFavorites = (favorites: Offer[], updatedOffer: Offer) => {
@@ -12,4 +11,3 @@ export const updateFavorites = (favorites: Offer[], updatedOffer: Offer) => {
     favorites.splice(favoriteOfferIndex, 1);
   }
 };
-    

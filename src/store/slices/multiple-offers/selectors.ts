@@ -1,4 +1,3 @@
-
 import { Offer } from '../../../types/offer';
 import { NameSpace } from '../../../const';
 

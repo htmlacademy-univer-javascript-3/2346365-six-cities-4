@@ -1,4 +1,3 @@
-
 import cn from 'classnames';
 import { CityName } from '../../../const';
 import { changeCity } from '../../../store';

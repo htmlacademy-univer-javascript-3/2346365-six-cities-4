@@ -1,9 +1,8 @@
-
 import { getAuthorizationStatus } from '../../store';
 import { useAppSelector } from '../../hooks';
 import { Routes } from '../../const';
 import PageLayout from '../page-layout/page-layout';
-import MainScreen from '../../components/main-screen/main-screen';
+import MainScreen from '../../pages/main-screen/main-screen';
 
 import MainRouteRedirection from '../main-route-redirection/main-route-redirection';
 import PrivateRouteRoute from '../private-route/private-route';

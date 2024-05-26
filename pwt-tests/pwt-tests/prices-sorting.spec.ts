@@ -1,4 +1,3 @@
-
 import { test, expect } from '@playwright/test';
 
 test('Проверка сортировки карточек по стоимости', async ({ page }) => {

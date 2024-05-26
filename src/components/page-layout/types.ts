@@ -1,7 +1,5 @@
-
 export type OutletContextType = {
-    setPageInfo: React.Dispatch<
-      React.SetStateAction<{ title: string; description: string }>
-    >;
-  };
-  
+  setPageInfo: React.Dispatch<
+    React.SetStateAction<{ title: string; description: string }>
+  >;
+};

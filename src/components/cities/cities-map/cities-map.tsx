@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import useMap from './use-map';
 import 'leaflet/dist/leaflet.css';
