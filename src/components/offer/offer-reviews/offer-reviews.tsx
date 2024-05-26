@@ -1,4 +1,3 @@
-
 import ReviewItem from '../../review-item/review-item.tsx';
 import { Review } from '../../../types/review.ts';
 

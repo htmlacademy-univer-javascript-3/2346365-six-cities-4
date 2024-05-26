@@ -1,4 +1,3 @@
-
 import { configureStore } from '@reduxjs/toolkit';
 import { reducer } from './reducer';
 import { redirect } from './middlewares/redirect';

@@ -1,4 +1,3 @@
-
 import cn from 'classnames';
 import { getFavorites } from '../../store';
 import { useAppSelector } from '../../hooks';

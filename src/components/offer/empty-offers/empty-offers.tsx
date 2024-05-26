@@ -1,6 +1,5 @@
-
-import { getSelectedCity } from '../../../store';
-import { useAppSelector } from '../../../hooks';
+import { getSelectedCity } from '../../store';
+import { useAppSelector } from '../../hooks';
 import { memo } from 'react';
 
 function EmptyOffers(): JSX.Element {

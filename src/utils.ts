@@ -1,4 +1,3 @@
-
 import { SortingType } from './const';
 import { Offer } from './types/offer';
 

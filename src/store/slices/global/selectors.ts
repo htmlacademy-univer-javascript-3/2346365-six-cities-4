@@ -1,4 +1,3 @@
-
 import { CityName, NameSpace, SortingType } from '../../../const';
 import { State } from '../../../types/state';
 

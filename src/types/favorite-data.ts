@@ -1,4 +1,3 @@
-
 import { FavoriteStatus } from '../const';
 
 export type FavoriteData = {

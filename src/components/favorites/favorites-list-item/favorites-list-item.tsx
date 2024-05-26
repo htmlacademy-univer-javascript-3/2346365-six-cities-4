@@ -1,10 +1,9 @@
-
-import OffersList from '../offer/offers-list/offers-list.tsx';
-import { Offer } from '../../types/offer.ts';
+import OffersList from '../../offer/offers-list/offers-list.tsx';
+import { Offer } from '../../../types/offer.ts';
 import { Link } from 'react-router-dom';
-import { Routes, CityName } from '../../const.ts';
-import { changeCity } from '../../store/index.ts';
-import { useAppDispatch } from '../../hooks/index.ts';
+import { Routes, CityName } from '../../../const.ts';
+import { changeCity } from '../../../store/index.ts';
+import { useAppDispatch } from '../../../hooks/index.ts';
 
 type FavoritesListItemProps = {
   cityName: CityName;

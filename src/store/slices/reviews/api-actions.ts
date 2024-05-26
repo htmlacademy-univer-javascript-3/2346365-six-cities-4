@@ -1,4 +1,3 @@
-
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { Review, ReviewData } from '../../../types/review';
 import { APIRoute, NameSpace } from '../../../const';

@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { useAppOutletContext } from '../../components/page-layout/hooks';
 import { ExtendedOffer } from '../../types/offer';

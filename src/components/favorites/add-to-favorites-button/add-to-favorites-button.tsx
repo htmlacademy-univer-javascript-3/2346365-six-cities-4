@@ -1,13 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 
-import { Routes, FavoriteStatus } from '../../const';
+import { Routes, FavoriteStatus } from '../../../const';
 
 import {
   getIsFavoriteStatusSubmitting,
   changeFavoriteStatusAction,
   getAuthCheckedStatus,
-} from '../../store';
-import { useAppDispatch, useAppSelector } from '../../hooks';
+} from '../../../store';
+import { useAppDispatch, useAppSelector } from '../../../hooks';
 
 type AddToFavoritesButtonProps = {
   isFavorite: boolean;

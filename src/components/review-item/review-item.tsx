@@ -1,4 +1,3 @@
-
 import { Review } from '../../types/review';
 import { formatRating } from '../../utils';
 const USER_AVATAR_SIZES = {
@@ -46,4 +45,3 @@ function ReviewItem({ review }: ReviewItemProps): JSX.Element {
 }
 
 export default ReviewItem;
-    

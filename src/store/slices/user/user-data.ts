@@ -1,4 +1,3 @@
-
 import { AuthorizationStatus, NameSpace } from '../../../const';
 import { UserData } from '../../../types/user-data';
 import { createSlice } from '@reduxjs/toolkit';
@@ -49,4 +48,3 @@ export const userData = createSlice({
       });
   },
 });
-    

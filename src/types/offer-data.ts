@@ -1,4 +1,3 @@
-
 import { Review } from './review';
 import { ExtendedOffer, Offer } from './offer';
 

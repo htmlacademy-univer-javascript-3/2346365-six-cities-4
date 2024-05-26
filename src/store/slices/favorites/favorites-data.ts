@@ -1,14 +1,13 @@
-
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { Offer } from '../../../types/offer';
 import { NameSpace } from '../../../const';
 import {
-  changeFavoriteStatusAction as changeFavoriteStatusAction,
-  fetchFavoritesAction as fetchFavoritesAction,
+  changeFavoriteStatusAction,
+  fetchFavoritesAction,
 } from './api-actions';
 
-import { updateFavorites as updateFavorites } from './utils';
+import { updateFavorites } from './utils';
 
 type FavoritesData = {
   favorites: Offer[];

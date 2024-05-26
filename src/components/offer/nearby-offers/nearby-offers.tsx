@@ -1,6 +1,5 @@
-
-import OffersList from '../offers-list/offers-list';
-import { Offer } from '../../../types/offer';
+import OffersList from '../offer/offers-list/offers-list';
+import { Offer } from '../../types/offer';
 
 type NearbyOffersProps = {
   nearPlaces: Offer[];

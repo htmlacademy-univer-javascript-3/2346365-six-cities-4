@@ -1,4 +1,3 @@
-
 import { CityName, NameSpace, SortingType } from '../../../const';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 

@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 
 import { fetchFavoritesAction, getAuthCheckedStatus } from '../../store';

@@ -1,4 +1,3 @@
-
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { APIRoute, NameSpace } from '../../../const';
 import { AsyncThunkConfig } from '../../../types/state';

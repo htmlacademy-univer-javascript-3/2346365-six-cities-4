@@ -1,4 +1,3 @@
-
 import { Offer } from '../../../types/offer';
 
 export const updateOffers = (offers: Offer[], updatedOffer: Offer) => {

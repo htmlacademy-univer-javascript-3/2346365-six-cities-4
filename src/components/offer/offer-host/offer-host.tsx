@@ -1,4 +1,3 @@
-
 import { ExtendedOffer } from '../../../types/offer';
 
 type OfferHostProps = {

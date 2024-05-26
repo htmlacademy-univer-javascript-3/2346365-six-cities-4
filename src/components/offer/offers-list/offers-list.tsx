@@ -1,6 +1,5 @@
-
 import OfferCard from '../offer-card/offer-card';
-import { sortOfferFunction } from '../../../utils.tsx';
+import { sortOfferFunction } from '../../../utils.ts';
 import { getSelectedSortType } from '../../../store/index.ts';
 import { useAppSelector } from '../../../hooks/index.ts';
 import { Offer } from '../../../types/offer.ts';
